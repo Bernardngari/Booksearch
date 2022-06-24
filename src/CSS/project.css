@@ -71,6 +71,11 @@ nav ul li:hover .hidden ul li:last-child
   border: none;
 }
 
+.hidden{
+  display: none;
+}
+
+
 #displaySearchTerm
 {
   font-size: 30px;
