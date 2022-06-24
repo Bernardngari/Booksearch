@@ -89,3 +89,23 @@ nav ul li:hover .hidden ul li:last-child
   height: max-content;
 }
 
+.displayArea
+{
+  width: 60vw;
+  position: absolute;
+  left: 500px;
+  top:200px;
+  line-height: 30px;
+}
+
+form
+{
+  height: 100vh;
+  line-height: 7vh;
+  margin-left: 2vw;
+  text-align: center;
+  position: fixed;
+  top: 200px;
+  left: 50px;
+}
+
