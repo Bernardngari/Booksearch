@@ -109,3 +109,33 @@ form
   left: 50px;
 }
 
+.button
+{
+  width:100px;
+  font-weight: 900;
+  border-radius: 10px;
+  height: 3vh;
+}
+
+
+.button:hover
+{
+  background-color: red;
+  color: white;
+
+}
+
+.book{
+  text-align: center;
+  width: 300px;
+}
+
+.book:hover{
+  background-color: grey;
+  padding:1px;
+  border-radius: 5px;
+  border: 2px dotted red;
+}
+
+
+
