@@ -14,4 +14,18 @@ function searchCompiler(){
     searchForm.reset()
     })
     }
-    searchCompiler()
+searchCompiler()
+    
+function fetchAllBooks ( URL )
+{
+  fetch( URL )
+    .then( res => res.json() )
+    .then( obj =>
+    {
+      let array = obj.books;
+      array.forEach(element=>{
+        displayBooks(element)
+      })
+      
+    } )
+}
