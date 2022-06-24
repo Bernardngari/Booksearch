@@ -62,7 +62,7 @@ nav ul li:hover .hidden ul li
 {
   width:120px;
   padding: 10px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px dotted white;
   text-align:center;
 }
 
@@ -146,3 +146,10 @@ form
   padding-left: 5px;
 }
 
+.eachBook
+{
+  width: 300px;
+  margin-top: 15px;
+  border-radius: 15px;
+  border: solid black 1px;
+}
