@@ -112,6 +112,7 @@ form
   position: fixed;
   top: 200px;
   left: 50px;
+  font-weight: 900;
 }
 
 .button
@@ -164,17 +165,18 @@ p
 {
   position: fixed;
   top: 100px;
-  left: 1000px;
+  left: 875px;
   text-align: center;
   border: solid black 1px;
   border-radius: 10px;
   font-weight: 900;
+  width: 28vw;
 }
 
 #divAction
 {
   height: 100vh;
-  width: 30vw;
+  width: 28vw;
   position: fixed;
   top: 250px;
   left: 900px;

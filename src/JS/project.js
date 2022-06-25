@@ -76,6 +76,9 @@ function displayBooks ( element )
 
 function addFavoriteBook ()
 {
-  let parent = document.querySelector( '.displayArea' )
-  let p = document.createElement
+  let ul = document.querySelector( '#ulAction' )
+  let li = document.createElement( 'li' )
+  ul.appendChild( li )
+  document.querySelector( '#input' ).value = li.textContent
+  
 }
