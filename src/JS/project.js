@@ -74,11 +74,27 @@ function displayBooks ( element )
   }   
 }
 
-function addFavoriteBook ()
+function addFavoriteBook (event)
 {
+  
+  event.preventDefault()
+  let form2=document.querySelector('#form2')
   let ul = document.querySelector( '#ulAction' )
-  let li = document.createElement( 'li' )
-  ul.appendChild( li )
-  document.querySelector( '#input' ).value = li.textContent
+  let li4 = document.createElement( 'li' )
+  ul.appendChild( li4 )
+  let input2=document.querySelector( '#input2' )
+  li4.textContent = `• ${ input2.value }`
+  input2.style.background= "white"
+  form2.reset()
   
 }
+
+document.querySelector('#form2').addEventListener('submit',addFavoriteBook)
+
+document.querySelector( '#input2' ).addEventListener( 'keydown', (event) =>
+{console.log(event);
+  let input2 = document.querySelector( '#input2' );
+  input2.style.background = "black"
+  input2.style.color = "white"
+  event.reset()
+})

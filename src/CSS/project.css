@@ -185,3 +185,8 @@ p
   border-radius: 10px;
 
 }
+
+#ulAction{
+  text-align: left;
+  padding-left: 10px;
+}
