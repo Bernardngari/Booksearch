@@ -73,3 +73,9 @@ function displayBooks ( element )
 
   }   
 }
+
+function addFavoriteBook ()
+{
+  let parent = document.querySelector( '.displayArea' )
+  let p = document.createElement
+}
