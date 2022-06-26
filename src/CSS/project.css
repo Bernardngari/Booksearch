@@ -190,3 +190,15 @@ p
   text-align: left;
   padding-left: 10px;
 }
+
+.hiw
+{
+  position: fixed;
+  top: 350px;
+  left: 100px;
+  width: 20vw;
+  line-height: 25px;
+  height: fit-content;
+  font-weight: 600;
+  font-style: italic;
+}

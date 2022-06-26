@@ -1,20 +1,21 @@
 # Booksearch
 
-## By Bernard Ngari
+## Developed by:
+    Bernard Ngari
 
 ## App screenshot
 ![image](./src/Images/App%20screenshot.png)
 
 ## Table Of Content
 
-+[Description](#Description)
-+[Features](#Features)
-+[Requirement](#Requirement)
-+[Installation-process](#Installation-process)
-+[Technologies-used](#Technologies-used)
-+[Live-Link](#Live-Link)
-+[License](#License)
-+[Authors-info](#Authors-info)
++ [Description](#Description)
++ [Features](#Features)
++ [Requirement](#Requirement)
++ [Installation-process](#Installation-process)
++ [Technologies-used](#Technologies-used)
++ [Live-Link](#Live-Link)
++ [License](#License)
++ [Authors-info](#Authors-info)
 
 ## Description
 <p>It can be challenging to find useful content online due to the ever-growing amount of user-generated data, which almost invariably results in information overload.
@@ -53,3 +54,6 @@ The app is hosted on Github at this [link]()
 
 * [Github](https://github.com/Bernardngari)
 * [LinkedIn](https://www.linkedin.com/in/bernardngari/)
+
+## License
+
