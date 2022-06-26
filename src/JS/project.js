@@ -1,24 +1,27 @@
+//Declarations in the global scope.
 const searchForm = document.querySelector( '#form' )
 const input = document.querySelector( '#input' )
 const searchTerm = input.value
+let display = document.querySelector( '.displayArea' )
+let everyBook=document.querySelector('#everyBook')
 
-
-function searchCompiler(){
-    searchForm.addEventListener('submit',(event)=>{
-    event.preventDefault()
-    const input = document.querySelector( '#input' )
-    const searchTerm = input.value
-    const URL= `https://api.itbook.store/1.0/search/${searchTerm}`
-    document.querySelector( '#displaySearchTerm' ).textContent = `You searched for books on ${ searchTerm.toUpperCase() }`
-    fetchAllBooks( URL )
-    searchForm.reset()
-    })
-    }
-searchCompiler()
+// function urlCompiler (){
+//     const input = document.querySelector( '#input' )
     
-function fetchAllBooks ( URL )
+//     searchForm.addEventListener('submit',(event)=>{
+//       event.preventDefault()
+//     let searchTerm = input.value
+//     let  URL = `https://api.itbook.store/1.0/search/${searchTerm}`
+//     document.querySelector( '#displaySearchTerm' ).textContent = `You searched for books on ${searchTerm.toUpperCase()}`
+//     fetchAllBooks( URL )
+//     searchForm.reset()
+//     })
+//     }
+// urlCompiler()
+
+function fetchAllBooks ()
 {
-  fetch( URL )
+  fetch(`https://api.itbook.store/1.0/search/javascript`)
     .then( res => res.json() )
     .then( obj =>
     {
@@ -26,24 +29,23 @@ function fetchAllBooks ( URL )
       array.forEach(element=>{
         displayBooks(element)
       })
-      
-    } )
+    })
 }
-
+fetchAllBooks()
 
 function displayBooks ( element )
 {
   if ( element.price != '$0.00' )
   {
-    let parent = document.createElement( 'div' )
-    parent.className='eachBook'
+    let parent1 = document.createElement( 'div' )
+    parent1.id = 'everyBook'
     let display = document.querySelector( '.displayArea' )
     let div1 = document.createElement( 'div' )
     let img = document.createElement( 'img' )
     img.Id = 'img'
     img.src = element.image
     div1.appendChild( img )
-    parent.appendChild( div1 )
+    parent1.appendChild( div1 )
     let div2 = document.createElement( 'div' )
     let div3 = document.createElement( 'div' )
     let div4 = document.createElement( 'div' )
@@ -55,28 +57,35 @@ function displayBooks ( element )
     let p = document.createElement( 'p' )
     p.textContent = element.title
     div2.appendChild( p )
-    parent.appendChild( div2 )
+    parent1.appendChild( div2 )
     let p2 = document.createElement( 'p' )
     p2.textContent = element.subtitle
     div3.appendChild( p2 )
-    parent.appendChild( div3 )
+    parent1.appendChild( div3 )
     let p3 = document.createElement( 'p' )
     p3.textContent = element.price
     div4.appendChild( p3 )
-    parent.appendChild( div4 )
+    parent1.appendChild( div4 )
     let btn = document.createElement( 'button' )
     btn.className = 'button'
     btn.textContent = 'BUY NOW'
     div5.appendChild( btn )
-    parent.appendChild( div5 )
-    display.appendChild(parent)
-
-  }   
+    parent1.appendChild( div5 )
+    display.appendChild( parent1 )
+    // parent1.className = 'hidden'
+    // let bookTitle = element.title;
+    // console.log( bookTitle );
+    //   if ( bookTitle.includes(searchTerm)  )
+    //   {
+    //     console.log('YES');
+    //     everyBook.className="visible"
+    //   }
+    // }   
+  }
 }
 
-function addFavoriteBook (event)
+function addFavoriteBook ( event )
 {
-  
   event.preventDefault()
   let form2=document.querySelector('#form2')
   let ul = document.querySelector( '#ulAction' )
@@ -86,7 +95,6 @@ function addFavoriteBook (event)
   li4.textContent = `• ${ input2.value }`
   input2.style.background= "white"
   form2.reset()
-  
 }
 
 document.querySelector('#form2').addEventListener('submit',addFavoriteBook)
@@ -99,11 +107,11 @@ document.querySelector( '#input2' ).addEventListener( 'keydown', (event) =>
   event.reset()
 })
 
-function howItWorks(){
+function howItWorks ()
+{
   document.querySelector('#hiw-li').addEventListener('mouseover',(event)=>{
     let target = document.querySelector( '#hiw' )
     target.style.display = "block"
-    event.reset()
   })
 }
 howItWorks()
