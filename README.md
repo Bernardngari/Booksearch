@@ -37,8 +37,8 @@ In order to use this web app, you will need:
 * An active internet connection.
 
 ## Installation-process
-To test the web-app, you may run it from this [link]()
-If you wish to clone and experiment with some features, you clone [here]()
+To test the web-app, you may run it from this [link](https://bernardngari.github.io/Phase-1-final-project/)
+If you wish to clone and experiment with some features, you clone [here](https://github.com/Bernardngari/Phase-1-final-project.git)
 
 ## Technologies-used
 * HTML was used to create the page structure.
@@ -46,7 +46,7 @@ If you wish to clone and experiment with some features, you clone [here]()
 * Javascript was used provide interactivity based on user action.
 
 ## Live-Link
-The app is hosted on Github at this [link]()
+The app is hosted on Github at this [link](https://bernardngari.github.io/Phase-1-final-project/)
 
 
 
@@ -56,4 +56,4 @@ The app is hosted on Github at this [link]()
 * [LinkedIn](https://www.linkedin.com/in/bernardngari/)
 
 ## License
-
+[License MIT](https://github.com/Bernardngari/Phase-1-final-project/blob/master/LICENSE.md)
