@@ -98,3 +98,12 @@ document.querySelector( '#input2' ).addEventListener( 'keydown', (event) =>
   input2.style.color = "white"
   event.reset()
 })
+
+function howItWorks(){
+  document.querySelector('#hiw-li').addEventListener('mouseover',(event)=>{
+    let target = document.querySelector( '#hiw' )
+    target.style.display = "block"
+    event.reset()
+  })
+}
+howItWorks()
