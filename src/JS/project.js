@@ -3,34 +3,45 @@ const searchForm = document.querySelector( '#form' )
 const input = document.querySelector( '#input' )
 const searchTerm = input.value
 let display = document.querySelector( '.displayArea' )
-let everyBook=document.querySelector('#everyBook')
+//let parent1=document.querySelector('#everyBook')
 
-// function urlCompiler (){
-//     const input = document.querySelector( '#input' )
+function urlCompiler (){
+    const input = document.querySelector( '#input' )
     
-//     searchForm.addEventListener('submit',(event)=>{
-//       event.preventDefault()
-//     let searchTerm = input.value
-//     let  URL = `https://api.itbook.store/1.0/search/${searchTerm}`
-//     document.querySelector( '#displaySearchTerm' ).textContent = `You searched for books on ${searchTerm.toUpperCase()}`
-//     fetchAllBooks( URL )
-//     searchForm.reset()
-//     })
-//     }
-// urlCompiler()
+    searchForm.addEventListener('submit',(event)=>{
+      event.preventDefault()
+    let searchTerm = input.value
+    let  URL = `https://api.itbook.store/1.0/search/${searchTerm}`
+    document.querySelector( '#displaySearchTerm' ).textContent = `You searched for books on ${searchTerm.toUpperCase()}`
+      fetchAllBooks( URL )
+    searchForm.reset()
+    })
+    }
+urlCompiler()
 
-function fetchAllBooks ()
-{
-  fetch(`https://api.itbook.store/1.0/search/javascript`)
+function fetchAllBooks(URL){
+  fetch( URL )
     .then( res => res.json() )
-    .then( obj =>
-    {
+    .then(obj=>{
       let array = obj.books;
       array.forEach(element=>{
         displayBooks(element)
       })
     })
 }
+
+// function fetchAllBooks ()
+// {
+//   fetch(`https://api.itbook.store/1.0/search/javascript`)
+//     .then( res => res.json() )
+//     .then( obj =>
+//     {
+//       let array = obj.books;
+//       array.forEach(element=>{
+//         displayBooks(element)
+//       })
+//     })
+// }
 fetchAllBooks()
 
 function displayBooks ( element )
@@ -72,17 +83,12 @@ function displayBooks ( element )
     div5.appendChild( btn )
     parent1.appendChild( div5 )
     display.appendChild( parent1 )
-    // parent1.className = 'hidden'
-    // let bookTitle = element.title;
-    // console.log( bookTitle );
-    //   if ( bookTitle.includes(searchTerm)  )
-    //   {
-    //     console.log('YES');
-    //     everyBook.className="visible"
-    //   }
-    // }   
+    form.addEventListener('mouseenter',(event)=>{
+    parent1.remove()
+})
+     }   
   }
-}
+
 
 function addFavoriteBook ( event )
 {
@@ -90,6 +96,7 @@ function addFavoriteBook ( event )
   let form2=document.querySelector('#form2')
   let ul = document.querySelector( '#ulAction' )
   let li4 = document.createElement( 'li' )
+  li4.className="delete"
   ul.appendChild( li4 )
   let input2=document.querySelector( '#input2' )
   li4.textContent = `• ${ input2.value }`
@@ -118,7 +125,6 @@ howItWorks()
 function deleteFavorites ()
 {
   document.querySelector( '#ulAction' ).addEventListener('click',(event)=>{
-    console.log( event.target );
     let target = event.target;
     target.remove()
   })
@@ -126,4 +132,7 @@ function deleteFavorites ()
 
 deleteFavorites()
 
-
+// form.addEventListener('mouseenter',(event)=>{
+//   console.log( event );
+//   parent1.remove()
+// })

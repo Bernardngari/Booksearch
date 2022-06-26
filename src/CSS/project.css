@@ -204,3 +204,10 @@ p
   font-weight: 600;
   font-style: italic;
 }
+
+.delete:hover{
+background-color: red;
+padding: 2px;
+border: 2px solid black;
+border-radius: 10px;
+}
