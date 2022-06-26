@@ -58,6 +58,14 @@ display: block;
 margin: 10px;
 }
 
+#red{
+  color: red;
+}
+
+#red:hover{
+  background-color: grey;
+}
+
 nav ul li:hover .hidden ul li
 {
   width:120px;
@@ -206,7 +214,7 @@ p
 }
 
 .delete:hover{
-background-color: red;
+background-color: grey;
 padding: 2px;
 border: 2px solid black;
 border-radius: 10px;

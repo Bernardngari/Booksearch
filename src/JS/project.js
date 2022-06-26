@@ -3,9 +3,9 @@ const searchForm = document.querySelector( '#form' )
 const input = document.querySelector( '#input' )
 const searchTerm = input.value
 let display = document.querySelector( '.displayArea' )
-//let parent1=document.querySelector('#everyBook')
 
-function urlCompiler (){
+//Compiles URL depending on user search
+function urlCompiler (searchTerm='javascript'){
     const input = document.querySelector( '#input' )
     
     searchForm.addEventListener('submit',(event)=>{
@@ -17,31 +17,20 @@ function urlCompiler (){
     searchForm.reset()
     })
     }
-urlCompiler()
+urlCompiler(searchTerm)
 
 function fetchAllBooks(URL){
   fetch( URL )
-    .then( res => res.json() )
-    .then(obj=>{
-      let array = obj.books;
-      array.forEach(element=>{
-        displayBooks(element)
+  .then( res => res.json() )
+  .then(obj=>{
+  let array = obj.books;
+  array.forEach(element=>{
+  displayBooks(element)
       })
     })
 }
 
-// function fetchAllBooks ()
-// {
-//   fetch(`https://api.itbook.store/1.0/search/javascript`)
-//     .then( res => res.json() )
-//     .then( obj =>
-//     {
-//       let array = obj.books;
-//       array.forEach(element=>{
-//         displayBooks(element)
-//       })
-//     })
-// }
+
 fetchAllBooks()
 
 function displayBooks ( element )
@@ -85,7 +74,8 @@ function displayBooks ( element )
     display.appendChild( parent1 )
     form.addEventListener('mouseenter',(event)=>{
     parent1.remove()
-})
+    document.querySelector( '#displaySearchTerm' ).textContent= 'Search more books below.'
+  })
      }   
   }
 
@@ -113,6 +103,7 @@ document.querySelector( '#input2' ).addEventListener( 'keydown', (event) =>
   input2.style.color = "white"
 })
 
+
 function howItWorks ()
 {
   document.querySelector('#hiw-li').addEventListener('mouseover',(event)=>{
@@ -125,14 +116,21 @@ howItWorks()
 function deleteFavorites ()
 {
   document.querySelector( '#ulAction' ).addEventListener('click',(event)=>{
-    let target = event.target;
-    target.remove()
+  let target = event.target;
+  target.remove()
   })
 }
 
 deleteFavorites()
-
-// form.addEventListener('mouseenter',(event)=>{
-//   console.log( event );
-//   parent1.remove()
-// })
+//The function below creates an unexpected bug when deleting favorite books. Will be fixed soon
+// function clickBookToFavorite(){
+//   display.addEventListener('click',(event)=>{
+//     let target = event.target;
+//     let booktitle = target.innerText;
+//     let li4 = document.createElement( 'li' )
+//     li4.className ='delete'
+//     li4.textContent = booktitle;
+//     document.querySelector( '#ulAction' ).appendChild(li4)
+//   })
+// }
+// clickBookToFavorite
