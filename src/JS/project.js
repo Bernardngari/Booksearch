@@ -100,11 +100,10 @@ function addFavoriteBook ( event )
 document.querySelector('#form2').addEventListener('submit',addFavoriteBook)
 
 document.querySelector( '#input2' ).addEventListener( 'keydown', (event) =>
-{console.log(event);
+{
   let input2 = document.querySelector( '#input2' );
   input2.style.background = "black"
   input2.style.color = "white"
-  event.reset()
 })
 
 function howItWorks ()
@@ -115,3 +114,16 @@ function howItWorks ()
   })
 }
 howItWorks()
+
+function deleteFavorites ()
+{
+  document.querySelector( '#ulAction' ).addEventListener('click',(event)=>{
+    console.log( event.target );
+    let target = event.target;
+    target.remove()
+  })
+}
+
+deleteFavorites()
+
+
