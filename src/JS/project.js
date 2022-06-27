@@ -99,7 +99,7 @@ document.querySelector( '#input2' ).addEventListener( 'keydown', (event) =>
 })
 
 
-function howItWorks ()
+function displayHowItWorks ()
 {
   document.querySelector('#hiw-li').addEventListener('mouseover',(event)=>{
     let target = document.querySelector( '#hiw' )
@@ -107,7 +107,18 @@ function howItWorks ()
   })
 }
 
-howItWorks()
+displayHowItWorks()
+
+const hideHowItworks = () =>
+{
+  document.querySelector( '#hiw-li' ).addEventListener( 'mouseout', ( event ) =>
+  {
+    let target = document.querySelector( '#hiw' )
+    target.style.display = "none"
+  })
+}
+
+hideHowItworks()
 
 function deleteFavorites ()
 {
