@@ -176,6 +176,11 @@ p
   font-style: italic;
 }
 
+label
+{
+  color: white;
+}
+
 .action
 {
   position: fixed;
