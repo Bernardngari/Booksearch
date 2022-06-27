@@ -67,7 +67,7 @@ function displayBooks ( element )
     div5.appendChild( btn )
     parent1.appendChild( div5 )
     display.appendChild( parent1 )
-    document.querySelector('#input').addEventListener('mouseenter',(event)=>{//Removes the previously loaded books on mouse entering the form.
+    document.querySelector('#input').addEventListener('keydown',(event)=>{//Removes the previously loaded books on mouse entering the form.
     parent1.remove()
     document.querySelector( '#displaySearchTerm' ).textContent= 'Search more books below.'
   })
