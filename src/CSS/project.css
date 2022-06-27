@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body
+{
+  background-color: rgb(126, 113, 113);
+}
+
 #nav
 {
   background-color:black;
