@@ -1,23 +1,20 @@
-//Declarations in the global scope.
-const searchForm = document.querySelector( '#form' )
-const input = document.querySelector( '#input' )
-const searchTerm = input.value
 let display = document.querySelector( '.displayArea' )
-
 //Compiles URL depending on user search
-function urlCompiler (searchTerm='javascript'){
+function urlCompiler ( suffix = 'javascript' )
+{
+  const searchForm = document.querySelector( '#form' );
+  searchForm.addEventListener('submit', (event)=>{
+    event.preventDefault()
     const input = document.querySelector( '#input' )
-    
-    searchForm.addEventListener('submit',(event)=>{
-      event.preventDefault()
-    let searchTerm = input.value
-    let  URL = `https://api.itbook.store/1.0/search/${searchTerm}`
-    document.querySelector( '#displaySearchTerm' ).textContent = `You searched for books on ${searchTerm.toUpperCase()}`
-      fetchAllBooks( URL )
+    let searchTerm = input.value;
+    let URL = `https://api.itbook.store/1.0/search/${ searchTerm }`
+    fetchAllBooks( URL )
     searchForm.reset()
-    })
+  })
+  let URL = 'https://api.itbook.store/1.0/search/javascript'
+  fetchAllBooks(URL)
     }
-urlCompiler(searchTerm)
+urlCompiler()
 
 function fetchAllBooks(URL){
   fetch( URL )
@@ -30,12 +27,9 @@ function fetchAllBooks(URL){
     })
 }
 
-
-fetchAllBooks()
-
 function displayBooks ( element )
 {
-  if ( element.price != '$0.00' )
+  if ( element.price != '$0.00' )//Eliminates the books with a price of $0.00, and are not loaded to DOM.
   {
     let parent1 = document.createElement( 'div' )
     parent1.id = 'everyBook'
@@ -72,7 +66,7 @@ function displayBooks ( element )
     div5.appendChild( btn )
     parent1.appendChild( div5 )
     display.appendChild( parent1 )
-    form.addEventListener('mouseenter',(event)=>{
+    form.addEventListener('mouseenter',(event)=>{//Removes the previously loaded books on mouse entering the form.
     parent1.remove()
     document.querySelector( '#displaySearchTerm' ).textContent= 'Search more books below.'
   })
@@ -111,6 +105,7 @@ function howItWorks ()
     target.style.display = "block"
   })
 }
+
 howItWorks()
 
 function deleteFavorites ()
