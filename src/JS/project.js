@@ -8,6 +8,7 @@ function urlCompiler ( suffix = 'javascript' )
     const input = document.querySelector( '#input' )
     let searchTerm = input.value;
     let URL = `https://api.itbook.store/1.0/search/${ searchTerm }`
+    document.querySelector('#displaySearchTerm').textContent=`You searched for ${searchTerm.toUpperCase()} books.`
     fetchAllBooks( URL )
     searchForm.reset()
   })
@@ -66,7 +67,7 @@ function displayBooks ( element )
     div5.appendChild( btn )
     parent1.appendChild( div5 )
     display.appendChild( parent1 )
-    form.addEventListener('mouseenter',(event)=>{//Removes the previously loaded books on mouse entering the form.
+    document.querySelector('#input').addEventListener('mouseenter',(event)=>{//Removes the previously loaded books on mouse entering the form.
     parent1.remove()
     document.querySelector( '#displaySearchTerm' ).textContent= 'Search more books below.'
   })
