@@ -4,7 +4,7 @@
     Bernard Ngari
 
 ## App screenshot
-![image](./src/Images/App%20screenshot.png)
+![image](./src/Images/Booksearch.png)
 
 ## Table Of Content
 
@@ -37,8 +37,8 @@ In order to use this web app, you will need:
 * An active internet connection.
 
 ## Installation-process
-To test the web-app, you may run it from this [link](https://bernardngari.github.io/Phase-1-final-project/)
-If you wish to clone and experiment with some features, you clone [here](https://github.com/Bernardngari/Phase-1-final-project.git)
+To test the web-app, you may run it from this [link](https://bernardngari.github.io/Booksearch/)
+If you wish to clone and experiment with some features, you clone [here](https://bernardngari.github.io/Booksearch/)
 
 ## Technologies-used
 * HTML was used to create the page structure.
@@ -46,7 +46,7 @@ If you wish to clone and experiment with some features, you clone [here](https:/
 * Javascript was used provide interactivity based on user action.
 
 ## Live-Link
-The app is hosted on Github at this [link](https://bernardngari.github.io/Phase-1-final-project/)
+The app is hosted on Github at this [link](https://bernardngari.github.io/Booksearch/)
 
 
 
@@ -56,4 +56,4 @@ The app is hosted on Github at this [link](https://bernardngari.github.io/Phase-
 * [LinkedIn](https://www.linkedin.com/in/bernardngari/)
 
 ## License
-[License MIT](https://github.com/Bernardngari/Phase-1-final-project/blob/master/LICENSE.md)
+[MIT](https://github.com/Bernardngari/Phase-1-final-project/blob/master/LICENSE.md)
